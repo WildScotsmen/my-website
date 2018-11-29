@@ -5,11 +5,8 @@ https://scoots.netlify.com/
 ### Technologies
 * React.js
 * Material UI
-* Netlify
 * Google Firebase
 * EmailJS
-
-
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/>
