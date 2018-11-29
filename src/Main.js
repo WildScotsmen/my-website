@@ -5,9 +5,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import SocialMedia from './component/SocialMedia';
-import MovieQuote from './component/MovieQuote';
-import ContactForm from './component/ContactForm';
+import Contact from './page/Contact';
+import Quote from './page/Quote';
+import Home from './page/Home';
+import HomeIcon from '@material-ui/icons/Home';
+import LocalMoviesIcon from '@material-ui/icons/LocalMovies'
+import EmailIcon from '@material-ui/icons/Email';
 
 function TabContainer(props) {
     return (
@@ -25,11 +28,12 @@ const styles = theme => ({
     root: {
         width: '100vw',
         height: '100vh',
+        flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
     },
 });
 
-class ScrollableTabsButtonAuto extends React.Component {
+class Main extends React.Component {
     state = {
         value: 0,
     };
@@ -54,21 +58,21 @@ class ScrollableTabsButtonAuto extends React.Component {
                         scrollable
                         scrollButtons="auto"
                     >
-                        <Tab label="Home" />
-                        <Tab label="Movie Quote" />
-                        <Tab label="Contact" />
+                        <Tab icon={<HomeIcon />} label="Home" />
+                        <Tab icon={<LocalMoviesIcon />} label="Movie Quote" />
+                        <Tab icon={<EmailIcon />} label="Contact" />
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer>{<SocialMedia />}</TabContainer>}
-                {value === 1 && <TabContainer>{<MovieQuote />}</TabContainer>}
-                {value === 2 && <TabContainer>{<ContactForm />}</TabContainer>}
+                {value === 0 && <TabContainer>{<Home />}</TabContainer>}
+                {value === 1 && <TabContainer>{<Quote />}</TabContainer>}
+                {value === 2 && <TabContainer>{<Contact />}</TabContainer>}
             </div>
-                );
-            }
-        }
-        
-ScrollableTabsButtonAuto.propTypes = {
-                    classes: PropTypes.object.isRequired,
-            };
-            
-export default withStyles(styles)(ScrollableTabsButtonAuto);
+        );
+    }
+}
+
+Main.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Main);

@@ -9,7 +9,6 @@ import Divider from '@material-ui/core/Divider';
 const styles = theme => ({
     root: {
         width: '100%',
-        margin: 'auto',
         backgroundColor: theme.palette.background.paper,
     },
 });
@@ -28,16 +27,16 @@ class SocialMedia extends React.Component {
         return (
             <div className={classes.root}>
                 <List component="nav">
-                    <ListItemLink target="_blank" href="https://github.com/WildScotsmen/">
-                        <ListItemText style={{ textAlign: 'center' }} primary="GitHub" />
-                    </ListItemLink>
-                    <Divider />
                     <ListItemLink target="_blank" href="https://twitter.com/otterdork">
                         <ListItemText style={{ textAlign: 'center' }} primary="Twitter" />
                     </ListItemLink>
                     <Divider />
                     <ListItemLink target="_blank" href="https://thewildscotsmen.tumblr.com/">
                         <ListItemText style={{ textAlign: 'center' }} primary="Tumblr" />
+                    </ListItemLink>
+                    <Divider />
+                    <ListItemLink target="_blank" href="https://github.com/WildScotsmen/">
+                        <ListItemText style={{ textAlign: 'center' }} primary="GitHub" />
                     </ListItemLink>
                 </List>
             </div>
