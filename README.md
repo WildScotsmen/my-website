@@ -13,4 +13,5 @@ https://scoots.netlify.com/
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg"/>
 </a>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
