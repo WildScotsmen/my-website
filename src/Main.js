@@ -59,7 +59,7 @@ class Main extends React.Component {
                         scrollButtons="auto"
                     >
                         <Tab icon={<HomeIcon />} label="Home" />
-                        <Tab icon={<LocalMoviesIcon />} label="Movie Quote" />
+                        <Tab icon={<LocalMoviesIcon />} label="Quote" />
                         <Tab icon={<EmailIcon />} label="Contact" />
                     </Tabs>
                 </AppBar>
